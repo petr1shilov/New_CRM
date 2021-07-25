@@ -1,0 +1,35 @@
+{% extends 'user_reqest/baze.html' %} 
+<!-- импорт повторяющиего блока html -->
+{% block title %}
+    Добавить запрос
+{% endblock %}
+
+{% block content %}
+    <h1> Добавление запросов </h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.user_name }}<br>
+        {{ form.text_1 }}<br>
+        {{ form.user_conact }}<br>
+        {{ form.pub_time }}<br>
+        {{ form.pub_date }}<br>
+        <!-- <input type="text" placeholder="Введите контанктные данные" class="form-control"><br> -->
+        <!-- <textarea placeholder="Опишите запрос" class="form-control"></textarea><br> -->
+        <!-- <input type="text" placeholder="Введите время запроса" name="pub_time" class="vTimeField" size="8" required id="id_pub_time">
+        <samp class="detetimeshortcuts">
+            
+            <a href="#">Сейчас</a>
+            
+            <a href="#" id="clocklink0">
+                <samp class="clock-icon" title="Выберите время">
+                    
+                </samp>
+            </a>
+        </samp><br> -->
+        <button type="submit" class="btn btn-success"> 
+            Добавить запрос
+        </button>
+        <span>{{ error }}</span>
+    </form>
+{% endblock %}
+<!-- констукция для ввода в изменяемый блок кода -->

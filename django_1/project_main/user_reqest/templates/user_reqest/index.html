@@ -1,0 +1,52 @@
+{% extends 'user_reqest/baze.html' %} 
+<!-- импорт повторяющиего блока html -->
+{% block title %}
+    {{title}}
+{% endblock %}
+
+{% block content %}
+    <h1> Список запросов </h1>
+    {% if tasks %}
+        {% for i in tasks %}
+            <div class="alert alert-warning mt-2">
+                <h3>{{i.user_name}}</h3>
+                <h3>{{i.text_1}}</h3>
+                <p>{{i.pub_time}}</p><p>{{i.pub_date}}</p>
+                
+            </div>
+        {% endfor%}
+    {% else %}
+            <p>no nouts</p>
+    {% endif %}        
+{% endblock %}
+<!-- констукция для ввода в изменяемый блок кода -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная страница</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="d-flex flex-column flex-md-row align-items-center pb-3 mb-4 border-bottom">
+        <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
+          
+          <span class="fs-4">Что-то свое</span>
+        </a>
+  
+        <nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto">
+          <a class="me-3 py-2 text-dark text-decoration-none" href="#">Features</a>
+          <a class="me-3 py-2 text-dark text-decoration-none" href="#">Enterprise</a>
+          <a class="me-3 py-2 text-dark text-decoration-none" href="#">Support</a>
+          <a class="py-2 text-dark text-decoration-none" href="#">Pricing</a>
+        </nav>
+      </div>
+    
+    <h1> Main_page </h1>
+    <p>simple_text</p>
+</body>
+</html> -->
+
